@@ -1,4 +1,4 @@
-use std::{path::PathBuf, string, collections::HashMap};
+use std::path::PathBuf;
 
 use serde::Deserialize;
 
@@ -43,17 +43,16 @@ pub struct Native {
 	pub path: PathBuf,
 	pub sha1: String,
 	pub size: u32,
-	pub url: String
+	pub url: String,
 }
-
 
 #[derive(Deserialize, Debug)]
 pub struct Classifiers {
-	#[serde(rename="natives-linux")]
+	#[serde(rename = "natives-linux")]
 	pub natives_linux: Option<Native>,
-	#[serde(rename="natives-osx")]
+	#[serde(rename = "natives-osx")]
 	pub natives_osx: Option<Native>,
-	#[serde(rename="natives-windows")]
+	#[serde(rename = "natives-windows")]
 	pub natives_windows: Option<Native>,
 }
 
@@ -73,7 +72,7 @@ pub struct NativeList {
 
 #[derive(Deserialize, Debug)]
 pub struct Os {
-	pub name: String
+	pub name: String,
 }
 
 #[derive(Deserialize, Debug)]

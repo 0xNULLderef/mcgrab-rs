@@ -7,4 +7,9 @@ futures = "0.3.19"
 reqwest = "0.11.8"
 serde = { version = "1.0.132", features = ["derive"] }
 serde_json = "*"
+tempdir = "0.3.7"
 tokio = { version = "1.15.0", features = ["full"] }
+zip = "0.5.13"
+zip-extensions = "0.6.1"
+
+[features]
